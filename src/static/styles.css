@@ -157,21 +157,52 @@ footer {
 }
 
 .participants-list {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none; /* hide default bullets */
+  padding-left: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .participant-item {
-  padding: 6px 8px;
-  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
   background: #ffffff;
-  border-radius: 4px;
-  border: 1px solid #eef2ff;
+  border-radius: 6px;
+  border: 1px solid #e8eefc;
   color: #1a237e;
   font-size: 14px;
+  box-shadow: 0 1px 0 rgba(10, 20, 60, 0.02);
 }
 
 .participant-item:hover {
-  background: #f1f5ff;
+  background: #f6f8ff;
+}
+
+.participant-email {
+  flex: 1 1 auto;
+  margin-right: 12px;
+  word-break: break-all;
+}
+
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.participant-delete:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+
+.participant-delete:focus {
+  outline: 2px solid rgba(26, 35, 126, 0.2);
 }
